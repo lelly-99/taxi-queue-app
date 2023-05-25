@@ -1,14 +1,17 @@
 # Taxi queue app
 
+* [Widget](./widget/index.html)
+* [Tests](./test/index.html)
+
 A local taxi association needs some help to manage queues at some of their taxi ranks.
 
 <span style="float: left">
-	<img src="queue.png" alt="" width="100" style="display:inline-block" >
-	<img src="queue.png" alt="" width="100" style="display:inline-block" >
-	<img src="queue.png" alt="" width="100" style="display:inline-block" >
-	<img src="minivan.png" alt="" width="100" style="display:inline-block">
-	<img src="arrow.png" alt="" width="100" style="display:inline-block">
-	<img src="minivan.png" alt="" width="100" style="display:inline-block">
+	<img src="../image/queue.png" alt="" width="100" style="display:inline-block" >
+	<img src="../image/queue.png" alt="" width="100" style="display:inline-block" >
+	<img src="../image/queue.png" alt="" width="100" style="display:inline-block" >
+	<img src="../image/minivan.png" alt="" width="100" style="display:inline-block">
+	<img src="../image/arrow.png" alt="" width="100" style="display:inline-block">
+	<img src="../image/minivan.png" alt="" width="100" style="display:inline-block">
 </span>
 
 They need a web widget which rank managers can use to keep track of how many people are joining and leaving taxi queues. They also want to keep track of how many taxis are queueing.

@@ -2,7 +2,7 @@ function TaxiQueue() {
 
 
 	function joinQueue() {
-
+		
 	}
 
 	function leaveQueue() {
