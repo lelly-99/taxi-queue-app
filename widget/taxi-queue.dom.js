@@ -18,10 +18,7 @@ const taxiQueue = TaxiQueue();
 
 // DOM events
 joinButton.addEventListener('click', function () {
-    if(taxiQueue.joinQueue()){
-        passenger.innerHTML = taxiQueue.joinQueue()
-        localStorage.setItem("passenger", Number(passengers));
-    }
+    passenger.innerHTML = taxiQueue.joinQueue()
 });
 
 
@@ -30,9 +27,7 @@ leaveButton.addEventListener('click', function () {
 });
 
 taxiJoinButton.addEventListener('click', function () {
-    if(taxiQueue.joinQueue() = 12){
-        taxi.innerHTML = taxiQueue.joinTaxiQueue()
-    }
+    taxi.innerHTML = taxiQueue.joinTaxiQueue()
 });
 
 departButton.addEventListener('click', function () {

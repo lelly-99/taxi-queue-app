@@ -4,17 +4,21 @@ function TaxiQueue() {
 	var taxi = 0
 	
 	function joinQueue() {
-		passenger++
+		var join = passenger++
+		return join
 	}
 
 	function leaveQueue() {
 		if (passenger > 0) {
-			passenger--;
+			var leave = passenger--;
 		  }
+		  return leave;
 	}
 
+
 	function joinTaxiQueue() {
-		taxi++
+		var joinTaxi = taxi++
+		return joinTaxi
 	}
 
 	function queueLength() {
@@ -26,9 +30,10 @@ function TaxiQueue() {
 	}
 
 	function taxiDepart(){
-		if(passenger === 12){
-			taxi--
+		if(taxi && passenger === 12){
+			var depart = taxi--
 		}
+		return depart
 	}
 
 	return {
