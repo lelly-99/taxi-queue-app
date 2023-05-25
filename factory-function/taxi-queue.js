@@ -2,7 +2,6 @@ function TaxiQueue() {
 
 	var passenger = 0
 	var taxi = 0
-	var passengers = 12 * passenger
 	
 	function joinQueue() {
 		passenger++
@@ -15,9 +14,7 @@ function TaxiQueue() {
 	}
 
 	function joinTaxiQueue() {
-		if(passenger === passengers){
-			taxi++
-		}
+		taxi++
 	}
 
 	function queueLength() {
@@ -29,7 +26,7 @@ function TaxiQueue() {
 	}
 
 	function taxiDepart(){
-		if(passenger === passengers){
+		if(passenger === 12){
 			taxi--
 		}
 	}
