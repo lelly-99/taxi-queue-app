@@ -108,9 +108,9 @@ describe('The taxi queue app', function() {
 		taxiQueue.taxiDepart();
 
 		// data after a taxi departed
-		assert.equal(15, taxiQueue.queueLength());
-		assert.equal(15, taxiQueue.queueLength());
-		assert.equal(15, taxiQueue.queueLength());
+		assert.equal(3, taxiQueue.queueLength());
+		assert.equal(3, taxiQueue.queueLength());
+		assert.equal(3, taxiQueue.queueLength());
 
 	});
 

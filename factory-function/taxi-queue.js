@@ -1,47 +1,46 @@
 function TaxiQueue() {
-
-	var passenger = 0
-	var taxi = 0
-	
+	var person = 0;
+	var taxi = 0;
+	var depart = 0;
+  
 	function joinQueue() {
-		var join = passenger++
-		return join
+	  person++;
 	}
-
+  
 	function leaveQueue() {
-		if (passenger > 0) {
-			var leave = passenger--;
-		  }
-		  return leave;
+	  if (person > 0) {
+		person--;
+	  }
 	}
-
-
+  
 	function joinTaxiQueue() {
-		var joinTaxi = taxi++
-		return joinTaxi
+	  return ++taxi;
 	}
-
+  
 	function queueLength() {
-		return passenger
+	  return person;
 	}
-
+  
 	function taxiQueueLength() {
-		return taxi
+	  return taxi;
 	}
-
-	function taxiDepart(){
-		if(taxi && passenger === 12){
-			var depart = taxi--
-		}
-		return depart
+  
+	function taxiDepart() {
+	  if (taxi > 0 && person >= 12) {
+		depart++;
+		person -= 12;
+		taxi--;
+	  }
+	  return depart;
 	}
-
+  
 	return {
-		joinQueue,
-		leaveQueue,
-		joinTaxiQueue,
-		queueLength,
-		taxiQueueLength,
-		taxiDepart
-	}
-}
+	  joinQueue,
+	  leaveQueue,
+	  joinTaxiQueue,
+	  queueLength,
+	  taxiQueueLength,
+	  taxiDepart,
+	};
+  }
+  
