@@ -1,6 +1,6 @@
 function TaxiQueue() {
-	var person = 0;
-	var taxi = 0;
+	var person =  0;
+	var taxi =  0;
 	var depart = 0;
   
 	function joinQueue() {
@@ -29,7 +29,7 @@ function TaxiQueue() {
 	  if (taxi > 0 && person >= 12) {
 		depart++;
 		person -= 12;
-		taxi--;
+		--taxi;
 	  }
 	  return depart;
 	}

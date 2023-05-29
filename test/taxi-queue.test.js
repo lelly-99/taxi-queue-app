@@ -76,7 +76,6 @@ describe('The taxi queue app', function() {
 
 	});
 
-
 	it ('should allow taxis to leave the queue if there is enough passengers queueing', function() {
 
 		const taxiQueue = TaxiQueue();
