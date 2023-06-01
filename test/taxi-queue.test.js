@@ -103,13 +103,10 @@ describe('The taxi queue app', function() {
 
 		// data before a taxi departs
 		assert.equal(15, taxiQueue.queueLength());
-		assert.equal(15, taxiQueue.queueLength());
 
 		taxiQueue.taxiDepart();
 
 		// data after a taxi departed
-		assert.equal(3, taxiQueue.queueLength());
-		assert.equal(3, taxiQueue.queueLength());
 		assert.equal(3, taxiQueue.queueLength());
 
 	});
@@ -137,7 +134,6 @@ describe('The taxi queue app', function() {
 
 		// data before a taxi departs
 		assert.equal(11, taxiQueue.queueLength());
-		assert.equal(11, taxiQueue.queueLength());
 
 		// this function call should do nothing as there is not enough passengers in the queue
 		taxiQueue.taxiDepart();
@@ -147,9 +143,6 @@ describe('The taxi queue app', function() {
 	it ('should check that a taxi can not leave if the taxi queue is empty', function() {
 
 		const taxiQueue = TaxiQueue();
-
-		// data before a taxi departs
-		assert.equal(0, taxiQueue.queueLength());
 		// this function call should do nothing as there is no taxis in the taxi queue
 		taxiQueue.taxiDepart();
 		// data after a taxi departed
