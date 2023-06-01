@@ -62,15 +62,16 @@ describe('The taxi queue app', function() {
 
 		const taxiQueue = TaxiQueue();
 
-		taxiQueue.joinQueue();
-		taxiQueue.joinQueue();
-		taxiQueue.joinQueue();
+		taxiQueue.joinTaxiQueue();
+		taxiQueue.joinTaxiQueue();
+		taxiQueue.joinTaxiQueue();
 
-		taxiQueue.leaveQueue();
-		taxiQueue.leaveQueue();
-		taxiQueue.leaveQueue();
-		taxiQueue.leaveQueue();
-		taxiQueue.leaveQueue();
+		taxiQueue.taxiDepart();
+		taxiQueue.taxiDepart();
+		taxiQueue.taxiDepart();
+		taxiQueue.taxiDepart();
+		taxiQueue.taxiDepart();
+		taxiQueue.taxiDepart();
 
 		assert.equal(0, taxiQueue.queueLength());
 
