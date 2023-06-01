@@ -18,7 +18,7 @@ var taxis = localStorage.getItem("taxis") || 0
 taxi.innerHTML = taxis
 
 //local storage for taxis departing
-var departs = localStorage.getItem("departs")
+var departs = localStorage.getItem("departs") || 0
 if(departs){
   depart.innerHTML = departs
 }
