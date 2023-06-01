@@ -155,4 +155,27 @@ describe('The taxi queue app', function() {
 		assert.equal(0, taxiQueue.queueLength());
 
 	});
+	//local storage unit tests
+	it('should be able to initialize passengers queue count', function() {
+		var passengers = 5;
+
+		var taxiQueue = TaxiQueue(passengers);
+	
+		assert.equal(passengers, taxiQueue.queueLength());
+	  });
+	  it('should be able to initialize taxi queue count', function() {
+		var passengers = 12;
+		var taxis = 3;
+		var taxiQueue = TaxiQueue(passengers, taxis);
+	
+		assert.equal(taxis, taxiQueue.taxiQueueLength());
+	  });
+	  it('should be able to initialize taxi departure count', function() {
+		var passengers = 5;
+		var taxis = 3;
+		var departs = 2;
+		var taxiQueue = TaxiQueue(passengers, taxis, departs);
+	
+		assert.equal(departs, taxiQueue.taxiDepart());
+	  });
 });

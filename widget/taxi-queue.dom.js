@@ -49,7 +49,6 @@ taxiJoinButton.addEventListener("click", function () {
     taxi.innerHTML = taxiQueue.taxiQueueLength();
     localStorage.setItem("taxis", Number(taxiQueue.taxiQueueLength()))
   }
-
 });
 
 departButton.addEventListener("click", function () {
