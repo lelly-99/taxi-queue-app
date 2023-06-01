@@ -11,17 +11,25 @@ var depart = document.querySelector(".taxi_depart_count")
 
 //local  storage for passengers
 var passengers = localStorage.getItem("passengers") || 0;
-passenger.innerHTML = passengers;
+if(passenger){
+  passenger.innerHTML = passengers;
+}
+
 
 //local storage for taxis joining queue
 var taxis = localStorage.getItem("taxis") || 0
-taxi.innerHTML = taxis
+if(taxis){
+  taxi.innerHTML = taxis
+}
 
 //local storage for taxis departing
 var departs = localStorage.getItem("departs") || 0
 if(departs){
   depart.innerHTML = departs
 }
+
+
+
 
 // create Factory Function instance
 const taxiQueue = TaxiQueue(passengers,taxis, departs);
