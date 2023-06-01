@@ -11,55 +11,56 @@ var depart = document.querySelector(".taxi_depart_count")
 
 //local  storage for passengers
 var passengers = localStorage.getItem("passengers") || 0;
-if(passenger){
-  passenger.innerHTML = passengers;
-}
-
+passenger.innerHTML = passengers;
 
 //local storage for taxis joining queue
 var taxis = localStorage.getItem("taxis") || 0
-if(taxis){
-  taxi.innerHTML = taxis
-}
+taxi.innerHTML = taxis
+
 
 //local storage for taxis departing
 var departs = localStorage.getItem("departs") || 0
-if(departs){
-  depart.innerHTML = departs
-}
+depart.innerHTML = departs
+
 
 
 
 
 // create Factory Function instance
-const taxiQueue = TaxiQueue(passengers,taxis, departs);
+const taxiQueue = TaxiQueue(passengers, taxis, departs);
 
 // DOM events
 joinButton.addEventListener("click", function () {
-  taxiQueue.joinQueue();
+  taxiQueue.joinQueue()
+  passenger.innerHTML = passengers;
   passenger.innerHTML = taxiQueue.queueLength();
   localStorage.setItem("passengers", Number(taxiQueue.queueLength()))
 });
 
 leaveButton.addEventListener("click", function () {
-  taxiQueue.leaveQueue();
+  taxiQueue.leaveQueue()
   passenger.innerHTML = taxiQueue.queueLength();
+  localStorage.setItem("passengers", Number(taxiQueue.queueLength()))
 });
 
 taxiJoinButton.addEventListener("click", function () {
-  taxiQueue.joinTaxiQueue()
-  taxi.innerHTML = taxiQueue.taxiQueueLength();
-  localStorage.setItem("taxis", Number(taxiQueue.taxiQueueLength()))
+  if (taxiQueue.joinTaxiQueue()) {
+    taxi.innerHTML = taxis
+    taxi.innerHTML = taxiQueue.taxiQueueLength();
+    localStorage.setItem("taxis", Number(taxiQueue.taxiQueueLength()))
+  }
+
 });
 
 departButton.addEventListener("click", function () {
   taxiQueue.joinQueue();
   taxiQueue.leaveQueue();
- 
+
+  depart.innerHTML = departs
   depart.innerHTML = taxiQueue.taxiDepart();
   localStorage.setItem("departs", Number(taxiQueue.taxiDepart()))
-  
-  if(taxiQueue.taxiDepart()){
+
+  if (taxiQueue.taxiDepart()) {
     passenger.innerHTML = taxiQueue.queueLength();
     localStorage.setItem("passengers", Number(taxiQueue.queueLength()))
     taxi.innerHTML = taxiQueue.taxiQueueLength();

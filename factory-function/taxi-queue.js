@@ -1,7 +1,7 @@
-function TaxiQueue() {
-	var person =  0;
-	var taxi =  0;
-	var depart = 0;
+function TaxiQueue(passengers, taxis, departs) {
+	var person = passengers || 0;
+	var taxi =  taxis || 0;
+	var depart = departs || 0;
   
 	function joinQueue() {
 	  person++;
